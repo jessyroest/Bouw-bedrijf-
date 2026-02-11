@@ -23,9 +23,10 @@
         <a href="#diensten" class="nav__link">Diensten</a>
         <a href="#projecten" class="nav__link">Projecten</a>
         <a href="#over-ons" class="nav__link">Over ons</a>
+        <a href="#werkwijze" class="nav__link">Werkwijze</a>
         <a href="#contact" class="nav__link nav__link--cta">Contact</a>
       </div>
-      <button class="nav__toggle" id="navToggle" aria-label="Menu openen">
+      <button class="nav__toggle" id="navToggle" aria-label="Menu openen" aria-expanded="false">
         <span></span>
         <span></span>
       </button>
@@ -36,11 +37,11 @@
   <header class="hero" id="hero">
     <div class="hero__bg">
       <div class="hero__overlay"></div>
+      <div class="hero__grain"></div>
       <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=1920&q=80" alt="Modern bouwproject" class="hero__image" loading="eager">
     </div>
     <div class="hero__content">
-      <div class="hero__label reveal">
-        <span class="hero__label-line"></span>
+      <div class="hero__badge reveal">
         <span>Sinds 1987</span>
       </div>
       <h1 class="hero__title">
@@ -48,11 +49,16 @@
         <span class="reveal-word">aan</span>
         <span class="reveal-word"><em>kwaliteit.</em></span>
       </h1>
-      <p class="hero__subtitle reveal">Moderne bouwoplossingen voor bedrijven en particulieren.</p>
-      <a href="#projecten" class="btn btn--primary reveal">
-        <span>Bekijk projecten</span>
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-      </a>
+      <p class="hero__subtitle reveal">Moderne bouwoplossingen voor bedrijven en particulieren in heel Nederland.</p>
+      <div class="hero__ctas reveal">
+        <a href="#projecten" class="btn btn--primary">
+          <span>Bekijk projecten</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#contact" class="btn btn--outline">
+          <span>Offerte aanvragen</span>
+        </a>
+      </div>
     </div>
     <div class="hero__scroll">
       <span>Scroll</span>
@@ -113,20 +119,30 @@
     <div class="container">
       <div class="stats__grid">
         <div class="stat reveal">
-          <span class="stat__number" data-count="350">0</span>
+          <div class="stat__number-wrap">
+            <span class="stat__number" data-count="240">0</span>
+            <span class="stat__suffix">+</span>
+          </div>
           <span class="stat__label">Projecten voltooid</span>
         </div>
         <div class="stat reveal">
-          <span class="stat__number" data-count="37">0</span>
+          <div class="stat__number-wrap">
+            <span class="stat__number" data-count="35">0</span>
+            <span class="stat__suffix">+</span>
+          </div>
           <span class="stat__label">Jaar ervaring</span>
         </div>
         <div class="stat reveal">
-          <span class="stat__number" data-count="48">0</span>
+          <div class="stat__number-wrap">
+            <span class="stat__number" data-count="48">0</span>
+          </div>
           <span class="stat__label">Vakmensen</span>
         </div>
         <div class="stat reveal">
-          <span class="stat__number" data-count="98">0</span>
-          <span class="stat__suffix">%</span>
+          <div class="stat__number-wrap">
+            <span class="stat__number" data-count="98">0</span>
+            <span class="stat__suffix">%</span>
+          </div>
           <span class="stat__label">Klanttevredenheid</span>
         </div>
       </div>
@@ -141,7 +157,7 @@
         <h2 class="section-title reveal">Geselecteerde <em>projecten</em></h2>
       </div>
       <div class="projects__grid">
-        <a href="#" class="project-card project-card--large reveal">
+        <div class="project-card reveal" data-project="0" tabindex="0" role="button" aria-label="Bekijk project: Kantoorcomplex De Horizon">
           <div class="project-card__image">
             <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80" alt="Kantoorcomplex De Horizon" loading="lazy">
           </div>
@@ -149,9 +165,12 @@
             <span class="project-card__category">Nieuwbouw</span>
             <h3 class="project-card__title">Kantoorcomplex De Horizon</h3>
             <span class="project-card__location">Amsterdam</span>
+            <span class="project-card__arrow">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+            </span>
           </div>
-        </a>
-        <a href="#" class="project-card reveal">
+        </div>
+        <div class="project-card reveal" data-project="1" tabindex="0" role="button" aria-label="Bekijk project: Villa Duinzicht">
           <div class="project-card__image">
             <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80" alt="Villa Duinzicht" loading="lazy">
           </div>
@@ -159,9 +178,12 @@
             <span class="project-card__category">Nieuwbouw</span>
             <h3 class="project-card__title">Villa Duinzicht</h3>
             <span class="project-card__location">Wassenaar</span>
+            <span class="project-card__arrow">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+            </span>
           </div>
-        </a>
-        <a href="#" class="project-card reveal">
+        </div>
+        <div class="project-card reveal" data-project="2" tabindex="0" role="button" aria-label="Bekijk project: Appartementencomplex Riviera">
           <div class="project-card__image">
             <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80" alt="Appartementencomplex Riviera" loading="lazy">
           </div>
@@ -169,9 +191,12 @@
             <span class="project-card__category">Projectontwikkeling</span>
             <h3 class="project-card__title">Appartementencomplex Riviera</h3>
             <span class="project-card__location">Rotterdam</span>
+            <span class="project-card__arrow">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+            </span>
           </div>
-        </a>
-        <a href="#" class="project-card reveal">
+        </div>
+        <div class="project-card reveal" data-project="3" tabindex="0" role="button" aria-label="Bekijk project: Herenhuis aan de Gracht">
           <div class="project-card__image">
             <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800&q=80" alt="Herenhuis Renovatie" loading="lazy">
           </div>
@@ -179,9 +204,12 @@
             <span class="project-card__category">Renovatie</span>
             <h3 class="project-card__title">Herenhuis aan de Gracht</h3>
             <span class="project-card__location">Utrecht</span>
+            <span class="project-card__arrow">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+            </span>
           </div>
-        </a>
-        <a href="#" class="project-card project-card--large reveal">
+        </div>
+        <div class="project-card reveal" data-project="4" tabindex="0" role="button" aria-label="Bekijk project: Residentie Parkview">
           <div class="project-card__image">
             <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=800&q=80" alt="Residentie Parkview" loading="lazy">
           </div>
@@ -189,9 +217,12 @@
             <span class="project-card__category">Nieuwbouw</span>
             <h3 class="project-card__title">Residentie Parkview</h3>
             <span class="project-card__location">Den Haag</span>
+            <span class="project-card__arrow">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+            </span>
           </div>
-        </a>
-        <a href="#" class="project-card reveal">
+        </div>
+        <div class="project-card reveal" data-project="5" tabindex="0" role="button" aria-label="Bekijk project: Bedrijfspand Innovate">
           <div class="project-card__image">
             <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=800&q=80" alt="Bedrijfspand Innovate" loading="lazy">
           </div>
@@ -199,11 +230,46 @@
             <span class="project-card__category">Zakelijk</span>
             <h3 class="project-card__title">Bedrijfspand Innovate</h3>
             <span class="project-card__location">Eindhoven</span>
+            <span class="project-card__arrow">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+            </span>
           </div>
-        </a>
+        </div>
       </div>
     </div>
   </section>
+
+  <!-- Project Modal -->
+  <div class="modal" id="projectModal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal__backdrop" id="modalBackdrop"></div>
+    <div class="modal__content">
+      <button class="modal__close" id="modalClose" aria-label="Sluiten">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </button>
+      <div class="modal__image">
+        <img id="modalImage" src="" alt="" loading="lazy">
+      </div>
+      <div class="modal__body">
+        <span class="modal__category" id="modalCategory"></span>
+        <h3 class="modal__title" id="modalTitle"></h3>
+        <div class="modal__meta">
+          <div class="modal__meta-item">
+            <span class="modal__meta-label">Locatie</span>
+            <span class="modal__meta-value" id="modalLocation"></span>
+          </div>
+          <div class="modal__meta-item">
+            <span class="modal__meta-label">Opgeleverd in</span>
+            <span class="modal__meta-value" id="modalYear"></span>
+          </div>
+          <div class="modal__meta-item">
+            <span class="modal__meta-label">Diensten</span>
+            <span class="modal__meta-value" id="modalServices"></span>
+          </div>
+        </div>
+        <p class="modal__description" id="modalDescription"></p>
+      </div>
+    </div>
+  </div>
 
   <!-- About Section -->
   <section class="about" id="over-ons">
@@ -247,18 +313,104 @@
     </div>
   </section>
 
-  <!-- Testimonial -->
-  <section class="testimonial">
+  <!-- Werkwijze Section -->
+  <section class="process" id="werkwijze">
     <div class="container">
-      <div class="testimonial__inner reveal">
-        <svg class="testimonial__quote" width="48" height="48" viewBox="0 0 24 24" fill="currentColor"><path d="M6 17h3l2-4V7H5v6h3zm8 0h3l2-4V7h-6v6h3z"/></svg>
-        <blockquote class="testimonial__text">
-          "Atlas Bouwgroep heeft ons kantoorpand van visie naar werkelijkheid gebracht. De aandacht voor detail en de professionaliteit van het team hebben onze verwachtingen overtroffen."
-        </blockquote>
-        <div class="testimonial__author">
-          <strong>Mark de Vries</strong>
-          <span>CEO, Horizon Vastgoed</span>
+      <div class="section-header section-header--center">
+        <span class="section-label reveal">Hoe wij werken</span>
+        <h2 class="section-title reveal">Onze <em>werkwijze</em></h2>
+      </div>
+      <div class="process__grid">
+        <div class="process__step reveal">
+          <span class="process__number">01</span>
+          <div class="process__icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          </div>
+          <h3 class="process__title">Intake & offerte</h3>
+          <p class="process__text">Vrijblijvend kennismakingsgesprek en een transparante offerte binnen 24 uur na bezichtiging.</p>
         </div>
+        <div class="process__connector" aria-hidden="true">
+          <svg width="40" height="2" viewBox="0 0 40 2"><line x1="0" y1="1" x2="40" y2="1" stroke="currentColor" stroke-width="1" stroke-dasharray="4 4"/></svg>
+        </div>
+        <div class="process__step reveal">
+          <span class="process__number">02</span>
+          <div class="process__icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          </div>
+          <h3 class="process__title">Planning & uitvoering</h3>
+          <p class="process__text">Gedetailleerde planning, vaste contactpersoon en wekelijkse updates over de voortgang.</p>
+        </div>
+        <div class="process__connector" aria-hidden="true">
+          <svg width="40" height="2" viewBox="0 0 40 2"><line x1="0" y1="1" x2="40" y2="1" stroke="currentColor" stroke-width="1" stroke-dasharray="4 4"/></svg>
+        </div>
+        <div class="process__step reveal">
+          <span class="process__number">03</span>
+          <div class="process__icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          </div>
+          <h3 class="process__title">Oplevering & nazorg</h3>
+          <p class="process__text">Grondige eindcontrole, oplevering op afspraak en 2 jaar volledige garantie op al het werk.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="testimonials">
+    <div class="container">
+      <div class="section-header section-header--center">
+        <span class="section-label reveal">Wat klanten zeggen</span>
+        <h2 class="section-title reveal">Klant<em>ervaringen</em></h2>
+      </div>
+      <div class="testimonials__grid">
+        <div class="testimonial-card reveal">
+          <svg class="testimonial-card__quote" width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><path d="M6 17h3l2-4V7H5v6h3zm8 0h3l2-4V7h-6v6h3z"/></svg>
+          <blockquote class="testimonial-card__text">
+            "Atlas Bouwgroep heeft ons kantoorpand van visie naar werkelijkheid gebracht. De aandacht voor detail en de professionaliteit van het team hebben onze verwachtingen overtroffen."
+          </blockquote>
+          <div class="testimonial-card__author">
+            <strong>Mark de Vries</strong>
+            <span>CEO, Horizon Vastgoed</span>
+          </div>
+        </div>
+        <div class="testimonial-card reveal">
+          <svg class="testimonial-card__quote" width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><path d="M6 17h3l2-4V7H5v6h3zm8 0h3l2-4V7h-6v6h3z"/></svg>
+          <blockquote class="testimonial-card__text">
+            "Onze villa is precies geworden zoals we het voor ogen hadden. Het hele traject verliep soepel en het team dacht proactief mee over oplossingen. Echte vakmensen."
+          </blockquote>
+          <div class="testimonial-card__author">
+            <strong>Sandra Bakker</strong>
+            <span>Particuliere opdrachtgever, Wassenaar</span>
+          </div>
+        </div>
+        <div class="testimonial-card reveal">
+          <svg class="testimonial-card__quote" width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><path d="M6 17h3l2-4V7H5v6h3zm8 0h3l2-4V7h-6v6h3z"/></svg>
+          <blockquote class="testimonial-card__text">
+            "De renovatie van ons monumentale pand was een complexe klus, maar Atlas heeft het schitterend aangepakt. Binnen budget, op tijd, en met respect voor het oorspronkelijke karakter."
+          </blockquote>
+          <div class="testimonial-card__author">
+            <strong>Pieter van den Berg</strong>
+            <span>Directeur, Van den Berg Holding</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trusted By -->
+  <section class="trusted">
+    <div class="container">
+      <p class="trusted__label reveal">Vertrouwd door</p>
+      <div class="trusted__logos reveal">
+        <span class="trusted__name">Horizon Vastgoed</span>
+        <span class="trusted__divider" aria-hidden="true"></span>
+        <span class="trusted__name">Van den Berg Holding</span>
+        <span class="trusted__divider" aria-hidden="true"></span>
+        <span class="trusted__name">Groenrijk Projecten</span>
+        <span class="trusted__divider" aria-hidden="true"></span>
+        <span class="trusted__name">De Bouwmeester B.V.</span>
+        <span class="trusted__divider" aria-hidden="true"></span>
+        <span class="trusted__name">Stadskwartier Ontwikkeling</span>
       </div>
     </div>
   </section>
@@ -287,6 +439,7 @@
             <span class="nav__logo-text">Atlas Bouwgroep</span>
           </a>
           <p class="footer__tagline">Wij bouwen projecten die generaties meegaan.</p>
+          <a href="#contact" class="btn btn--outline btn--small footer__cta-btn">Offerte aanvragen</a>
         </div>
         <div class="footer__grid">
           <div class="footer__col">
@@ -307,6 +460,16 @@
             </ul>
           </div>
           <div class="footer__col">
+            <h4 class="footer__heading">Werkgebied</h4>
+            <ul class="footer__list">
+              <li>Amsterdam</li>
+              <li>Rotterdam</li>
+              <li>Den Haag</li>
+              <li>Utrecht</li>
+              <li>Eindhoven</li>
+            </ul>
+          </div>
+          <div class="footer__col">
             <h4 class="footer__heading">Volg ons</h4>
             <div class="footer__socials">
               <a href="#" class="footer__social" aria-label="LinkedIn">
@@ -324,7 +487,7 @@
       </div>
       <div class="footer__bottom">
         <p>&copy; 2026 Atlas Bouwgroep. Alle rechten voorbehouden.</p>
-        <p class="footer__credit">Website door <a href="#">Sitemeesters</a></p>
+        <p class="footer__credit">KvK 12345678 &middot; Website door <a href="#">Sitemeesters</a></p>
       </div>
     </div>
   </footer>
